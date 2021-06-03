@@ -1,0 +1,2 @@
+rootProject.name = "AppMinhaIdeiaDB"
+include ':app'
