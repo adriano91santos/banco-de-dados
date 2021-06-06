@@ -66,11 +66,11 @@ public class ClienteController extends AppDataBase implements ICrud<Cliente> {
     }
 
     @Override
-    public List<Cliente> listar(Cliente obj) {
+    public List<Cliente> listar() {
 
-        List<Cliente> list = new ArrayList<>();
+        List<Cliente> lista = new ArrayList<>();
 
-        return list;
+        return lista;
 
     }
 }

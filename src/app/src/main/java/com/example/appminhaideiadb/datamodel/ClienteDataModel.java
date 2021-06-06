@@ -23,7 +23,7 @@ public class ClienteDataModel {
 
         // Concatenação de String
 
-        queryCriarTabela = "CREATE TABLE " + TABELA + " (";
+        queryCriarTabela += "CREATE TABLE " + TABELA + " (";
         queryCriarTabela += ID + " integer primary key autoincrement, ";
         queryCriarTabela += NOME + " text, "; // nome texto
         queryCriarTabela += EMAIL + " text ";

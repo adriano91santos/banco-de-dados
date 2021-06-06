@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.example.appminhaideiadb.api.AppUtil;
 import com.example.appminhaideiadb.datamodel.ClienteDataModel;
+import com.example.appminhaideiadb.datamodel.ProdutoDataModel;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
@@ -31,6 +32,10 @@ public class AppDataBase extends SQLiteOpenHelper {
         db.execSQL(ClienteDataModel.criarTabela()); // Irá criar a tabela no Banco de dados
 
         Log.d(AppUtil.TAG, "onCreate: Tabela cliente criada..." + ClienteDataModel.criarTabela());
+
+        db.execSQL(ProdutoDataModel.criarTabela());
+
+        Log.d(AppUtil.TAG, "onCreate: Tabela produto criada..." + ProdutoDataModel.criarTabela());
 
     }
 

@@ -3,6 +3,8 @@ package com.example.appminhaideiadb.controller;
 import android.content.ContentValues;
 import android.content.Context;
 
+import com.example.appminhaideiadb.datamodel.ClienteDataModel;
+import com.example.appminhaideiadb.datamodel.ProdutoDataModel;
 import com.example.appminhaideiadb.datasource.AppDataBase;
 import com.example.appminhaideiadb.model.Produto;
 
@@ -21,8 +23,8 @@ public class ProdutoController extends AppDataBase implements ICrud<Produto> {
     public boolean incluir(Produto obj) {
         dadoDoObjeto = new ContentValues();
 
-        dadoDoObjeto.put("nome", obj.getNome());
-        dadoDoObjeto.put("fornecedor", obj.getFornecedor());
+        dadoDoObjeto.put(ProdutoDataModel.NOME, obj.getNome());
+        dadoDoObjeto.put(ProdutoDataModel.FORNECEDOR, obj.getFornecedor());
 
         return false;
     }
@@ -31,9 +33,9 @@ public class ProdutoController extends AppDataBase implements ICrud<Produto> {
     public boolean alterar(Produto obj) {
         dadoDoObjeto = new ContentValues();
 
-        dadoDoObjeto.put("id", obj.getId());
-        dadoDoObjeto.put("nome", obj.getNome());
-        dadoDoObjeto.put("fornecedor", obj.getFornecedor());
+        dadoDoObjeto.put(ProdutoDataModel.ID, obj.getId());
+        dadoDoObjeto.put(ProdutoDataModel.NOME, obj.getNome());
+        dadoDoObjeto.put(ProdutoDataModel.FORNECEDOR, obj.getFornecedor());
 
         return false;
     }
@@ -42,14 +44,14 @@ public class ProdutoController extends AppDataBase implements ICrud<Produto> {
     public boolean deletar(Produto obj) {
         dadoDoObjeto = new ContentValues();
 
-        dadoDoObjeto.put("id", obj.getId());
+        dadoDoObjeto.put(ProdutoDataModel.ID, obj.getId());
         return false;
     }
 
     @Override
     public List<Produto> listar() {
-        List<Produto> list = new ArrayList<>();
+        List<Produto> lista = new ArrayList<>();
 
-        return list;
+        return lista;
     }
 }
